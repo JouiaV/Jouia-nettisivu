@@ -1,0 +1,13 @@
+
+body {
+    background-color: rgb(219, 144, 144);
+    color: rgb(100, 54, 76);
+}
+
+img {
+    border-radius: 2em;
+    border-style: dotted;
+    border-color: bisque;
+    border-width: 0.3em;
+}
+
