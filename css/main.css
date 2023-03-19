@@ -1,0 +1,151 @@
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+
+/* MAIN CONTENT */
+/* NAVBAR ------------------------------------------------- */
+div.navbar {
+    background-color: #20141c;
+    margin: 0;
+    margin-bottom: 2em;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+ul.navbar {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+li.navbar {
+    display: flex;
+    margin: 0em;
+    padding: 0em;
+}
+
+a.navbar {
+    transition: all 0.2s ease 0s;
+    display: block;
+    margin: 0em;
+    padding: 1.4em;
+    padding-bottom: 0.8em;
+    padding-top: 0.8em;
+    list-style-position: inside;
+    border: none;
+    font-size: 1.2em;
+}
+
+a.navbar:link {
+    color: #FFF2F9;
+    text-decoration: none;
+    background-color: #20141c;
+}
+
+a.navbar:visited {
+    color: #FFF2F9;
+    text-decoration: none;
+    background-color: #20141c;
+}
+
+a.navbar:hover {
+    color: #FE83C6;
+    text-decoration: none;
+    background-color: #20141c;
+    font-size: 1.3em;
+}
+
+a.navbar:active {
+    color: rgb(99, 6, 102);
+    text-decoration: none;
+    background-color: #20141c;
+}
+
+/* Current Page NAVBAR */
+
+a.active:link {
+    color: #FE83C6;
+    text-decoration: none;
+    background-color: #20141c;
+}
+
+a.active:visited {
+    color: #FE83C6;
+    text-decoration: none;
+    background-color: #20141c;
+}
+
+
+/* BODY ------------------------------------------------- */
+
+header {
+    margin: 0;
+    padding: 0;
+    background-color: none;
+    font-family: "Assistant", serif;
+}
+
+body {
+    background-color: #382833;
+    font-family: "Assistant", serif;
+    color: #FE83C6;
+    padding: 0;
+    margin: 0;
+    background-image: url("main_BG_1.png");
+}
+
+h1 {
+    font-family: 'Press Start 2P', serif;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+ 
+.container {
+    margin-left: 15em;
+    margin-right: 15em;
+    margin-top: 4em;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container img {
+    height: 10em;
+    border-radius: 1.5em;
+    border-style: dotted;
+    border-color: #A91079;
+    border-width: 0.2em;
+    padding: 0;
+    margin-right: 1em;
+}  
+
+.container h2 {
+    text-align: center;
+}
+
+.container p {
+    font-size: 20px;
+}
+
+footer {
+    margin-top: 5em;
+}
+
+footer p {
+    color: #160912;
+    text-align: center;
+    font-family: 'Sono', sans-serif;
+}
+
