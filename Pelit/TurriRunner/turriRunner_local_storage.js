@@ -16,6 +16,7 @@ export function manageNewScore(score) {
     if (score > high_score) {
         localStorage.setItem("high-score", score);
         highScoreElem.innerHTML = score
+        high_score = score
     }
 }
 
