@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.topbar {
+    background-color: #571e3d;
+    padding-bottom: 2em;
+    margin: 0;
+    display: block;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Press Start 2P', serif;
+    background-color: #20141c;
+    color:antiquewhite;
+}
+
+.world {
+    overflow: hidden;
+    position: relative;
+}
+
+.score-text {
+    position: absolute;
+    font-size: 3vmin;
+    right: 3vmin;
+    top: 3vmin;
+}
+
+.score {
+    position: absolute;
+    font-size: 3vmin;
+    right: 4vmin;
+    top: 7vmin;
+}
+
+.start-screen {
+    position: absolute;
+    font-size: 5vmin;
+    right: -30%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1em;
+}
+
+.hide {
+    display: none;
+}
+
+.ground {
+    --left: 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: calc(var(--left) * 1%)
+}
+
+.turri {
+    --bottom: 0;
+    position: absolute;
+    left: 1%;
+    height: 30%;
+    bottom: calc(var(--bottom) * 1%);
+}
+
+.este {
+    position: absolute;
+    left: calc(var(--left) * 1%);
+    height: 30%;
+    bottom: 0;
+}
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/Pelit.css">
+    <link rel="shortcut icon" type="image/png" href="images/joiav_icon.png" sizes="100x100">
+    <title>Jouia.V - Pelit</title>
+</head>
+
+<body onload="unfadeContent()">
+    
+    <header>
+        <div class="navbar">
+            <ul class="navbar">
+                <li class="navbar"><a href="index.html" id="a_navbar" class="a navbar" data-value="ETUSIVU">ETUSIVU</a></li>
+                <li class="navbar"><a href="jeesusKirja.html" id="a_navbar" class="a navbar" data-value="JEESUS TARINAKIRJA">JEESUS TARINAKIRJA</a></li>
+                <li class="navbar"><a href="" id="a_navbar" class="a navbar" data-value="KARVAKAMUJENLIITTO">KARVAKAMUJENLIITTO</a></li>
+                <li class="navbar"><a href="PörröKoe.html" id="a_navbar" class="a navbar" data-value="PÖRRÖKOE">PÖRRÖKOE</a></li>
+                <li class="navbar"><a href="Pelit.html" id="a_navbar" class="a navbar active" data-value="SPELAR">SPELAR</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <content>
+        <h1>Spelårna</h1>
+        <div class="container">
+            <h2 class="eka">I här har vi många spelar som man kan spela och karvamut tycker.</h2>
+        </div>
+
+        <div class="container peli" onclick="open_turri_runner()">
+            <img class="peli-cover" src="images/turriRunner_thumbnail.png">
+            <div class="peli-description">
+                <h2>Turri Runner</h2>
+                <p>Tässä pelissä pelaat mukavan pörröisena hahmona, joka yrittää väistää likaisia kissoja. Koikeile kuinka hyvin pärjäät!</p>
+            </div>
+        </div>
+
+        <div class="container peli" onclick="open_turri_clicker()">
+            <img class="peli-cover" src="images/historia_turrimiitti_kuva.jpg">
+            <div class="peli-description">
+                <h2>Turri clicker</h2>
+                <p>Tämä peli on aivan jotain mieletöntä et voi uskoa lupaan. jea jea jea. Pakko kokeilla. Siis avin oikeasti. Pörröinen sormi lupaus hyvä, tiiääkkö. Varmaan paras kokemus mitä tulee olemaan.</p>
+            </div>
+        </div>
+        
+    </content>
+
+    <footer>
+        <p>Tämä netti sivu kuuluu <b>Jouia.Veelle</b> ja palvoo jeesuksen tahtoa.</p>
+    </footer>
+
+</body>
+
+<script src="javascript/main.js"></script>
+<script src="javascript/Pelit.js"></script>
+</html>
