@@ -19,14 +19,14 @@ function unfadeContent() {
 const letters = "%#@€ABCDEFGHKMNOPQRSTUVWXYZ" // ABCDEFGHIJKLMNOPQRSTUVWXYZ
 const letters_length = letters.length
 links = document.querySelectorAll("a.navbar")
-var chance = 7
+var delay = 30
 
 for (i in links) {
     link = links[i]
     link.onmouseover = event => {
         let iterations = 0
         if (event.target.dataset.value.length <= 8) {
-            chance = 3
+            delay = 40
         }
         const interval = setInterval(() => {
             event.target.innerText = event.target.innerText.split("")
@@ -41,10 +41,10 @@ for (i in links) {
                 clearInterval(interval);
             } 
 
-            if(Math.floor(Math.random()*10)<chance) {
-                iterations += 1;
-            }
-        }, 30);
+            
+            iterations += 1;
+            
+        }, delay);
     }
 }
 
