@@ -1,0 +1,105 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+* {
+    scroll-behavior: smooth;
+}
+
+.alku-teksti {
+    margin-top: 2em;
+    margin-left: 15em;
+    margin-right: 15em;
+}
+
+.container h2 { 
+    font-family: 'Berkshire Swash', serif;
+    margin-bottom: 1.5em;
+    margin-top: 2em;
+    text-shadow: 0 0 10px rgb(238, 238, 238);
+    font-weight: 200;
+}
+
+.container {
+    color: rgb(51, 33, 4);
+    font-family: 'Berkshire Swash', serif;
+    background-image: url("../images/old_paper_BG_1.webp");
+    background-repeat: repeat;
+    padding: 2em;
+    border-style: none;
+    border-radius: 1em;
+    box-shadow: 0 0 20px black; 
+    padding-bottom: 3em;
+    padding-left: 3em;
+    padding-right: 3em;
+    margin-left: 19em;
+    margin-right: 11em;
+}
+
+.container p {
+    text-shadow: 0 0 10px #e4e4e4;
+    font-size: larger;
+    font-weight: 100;
+}
+
+.container img {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.sisallysluettelo {
+    margin: 0;
+    margin-left: 1.5em;
+    padding: 0;
+    position: fixed;
+    left: 0;
+    top: 28vh;
+    font-family: 'Berkshire Swash', serif;
+    /* background-color: #190620; */
+}
+
+.sisallysluettelo h3 {
+    text-align: center;
+    color:rgb(199, 166, 206);
+}
+
+.sisallysluettelo ul {
+    /* text-align: center; */
+    list-style:lower-greek;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.sisallysluettelo li {
+    max-width: 15em;
+    margin-bottom: 0.7em;
+    margin-left: 2.5em;
+}
+
+.sisallysluettelo a {
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+    transition: all 0.3s ease 0s;
+}
+.sisallysluettelo a:link, .sisallysluettelo a:visited {
+    color: rgb(199, 166, 206);
+}
+
+.sisallysluettelo a:hover {
+    text-decoration: none;
+    color: #FE83C6;
+}
+.sisallysluettelo a:active {
+    text-decoration: none;
+    color: #0e0a0c;
+}
+
+.same_page_link span {
+    font-family: 'Berkshire Swash', serif;
+    font-size: medium;
+}
+
