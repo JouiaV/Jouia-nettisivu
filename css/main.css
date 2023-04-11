@@ -104,6 +104,7 @@ body {
     padding: 0;
     margin: 0;
     background-image: url("../images/main_BG_1.png");
+    background-attachment: fixed;
 }
 
 h1 {
