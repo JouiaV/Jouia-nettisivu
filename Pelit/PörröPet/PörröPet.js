@@ -13,7 +13,7 @@ updateMoodbarAmount()
 
 function pet_click() {
     saveMoodBarLastTime(Date.now())
-    addToMoodbar(1)
+    addToMoodbar(2)
 }
 
 

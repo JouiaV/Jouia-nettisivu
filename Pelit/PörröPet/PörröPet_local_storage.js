@@ -28,7 +28,7 @@ export function decreaseTurricoins(amount) {
 var moodbar
 export function getMoodBar() {
     moodbar = localStorage.getItem("moodbar")
-    if (moodbar === null) {
+    if (moodbar === null || isNaN(moodbar) || moodbar === NaN) {
         moodbar = 0
     }
     return parseInt(moodbar)
