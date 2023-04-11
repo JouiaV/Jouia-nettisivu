@@ -1,4 +1,5 @@
 
+localStorage.setItem("moodbarlasttime", null)
 
 // turricoins - - - - - - -
 var turricoins = localStorage.getItem("turricoins");
