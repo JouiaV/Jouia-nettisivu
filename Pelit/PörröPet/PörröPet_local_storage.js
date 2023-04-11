@@ -1,4 +1,5 @@
 
+
 // turricoins - - - - - - -
 var turricoins = localStorage.getItem("turricoins");
 
@@ -22,21 +23,35 @@ export function decreaseTurricoins(amount) {
     localStorage.setItem("turricoins", turricoins);
 }
 
-// PET INFORMATON BARS -- - - - - -- - - - -- - - -- - -  - 
 
+// MOODBAR AMOUNT -- - - - - -- - - - -- - - -- - -  - 
+var moodbar
 export function getMoodBar() {
-    var moodbar = localStorage.getItem("moodbar")
+    moodbar = localStorage.getItem("moodbar")
     if (moodbar === null) {
         moodbar = 0
     }
     return parseInt(moodbar)
 }
 
-export function setMoodBar(amount) {
-    localStorage.setItem("moodbar", amount)
+export function saveMoodBar(amount) {
+    localStorage.setItem("moodbar", amount.toString())
 }
 
 
+// MOODBAR LAST TIME TRIGGERED - - - - - - - - - - - - - - - - --  - - - - -- - - -
+
+export function getMoodBarLastTime() {
+    var moodbarlasttime = localStorage.getItem("moodbarlasttime")
+    if (moodbarlasttime === null) {
+        moodbarlasttime = 0
+    }
+    return moodbarlasttime
+}
+
+export function saveMoodBarLastTime(amount) {
+    localStorage.setItem("moodbarlasttime", amount.toString())
+}
 
 
 

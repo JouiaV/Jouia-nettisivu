@@ -1,21 +1,63 @@
 
-import { getMoodBar, setMoodBar } from "./PörröPet_local_storage.js"
+import { getMoodBar, getMoodBarLastTime, saveMoodBar, saveMoodBarLastTime } from "./PörröPet_local_storage.js"
 import { getCustomProperty, incrementCustomProperty, setCustomProperty } from "./updateCustomProperty.js"
 
 const foodBarElem = document.querySelector("[data-foodbar]")
 const healthBarElem = document.querySelector("[data-healthbar]")
 const moodbarBarElem = document.querySelector("[data-moodbar]")
-// var moodbarAmount = getMoodBar()
+
+var moodbarLastTime = getMoodBarLastTime()
+
+updateInformationBars()
+
 
 export function addToMoodbar(amount) {
-    if (parseInt(getCustomProperty(moodbarBarElem, "--bar-prosent")) >= 100) {
-        incrementCustomProperty(moodbarBarElem, "--bar-prosent", -amount)
+    var bar_prosent = getMoodBar() + amount
+    if (0 < bar_prosent < 100) {
+        setCustomProperty(moodbarBarElem, "--bar-prosent", bar_prosent)
     } else {
-        incrementCustomProperty(moodbarBarElem, "--bar-prosent", amount)
+        setCustomProperty(moodbarBarElem, "--bar-prosent", -bar_prosent)
     }
-    setMoodBar(getCustomProperty(moodbarBarElem, "--bar-prosent"))
+    if (bar_prosent > 100) {
+        setCustomProperty(moodbarBarElem, "--bar-prosent", 100)
+    }
+    else if (bar_prosent < 0) {
+        setCustomProperty(moodbarBarElem, "--bar-prosent", 0)
+    }
+    saveMoodBar(getCustomProperty(moodbarBarElem, "--bar-prosent"))
 }
+
+
+export function setMoodBar(amount) {
+    setCustomProperty(moodbarBarElem, "--bar-prosent", amount)
+    saveMoodBar(amount)
+}
+
 
 export function updateMoodbarAmount() {
     setCustomProperty(moodbarBarElem, "--bar-prosent", getMoodBar())
 }
+
+
+
+export function updateInformationBars() {
+    adjustMoodBarOnTime(moodbarLastTime)
+    setTimeout(updateInformationBars, 1500);
+}
+
+
+function adjustMoodBarOnTime() {
+    var deltaTime = Date.now() - moodbarLastTime
+    if (deltaTime > 1000*60*60*2) {
+        setMoodBar(0)
+        return
+    }
+    var change = Math.floor(deltaTime / (1000*5))
+    addToMoodbar(-change)
+    if (change !== 0) {
+        moodbarLastTime = Date.now()
+        saveMoodBarLastTime(moodbarLastTime)
+    }
+}
+
+
