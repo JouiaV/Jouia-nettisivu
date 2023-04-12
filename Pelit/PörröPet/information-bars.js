@@ -45,17 +45,21 @@ export function updateInformationBars() {
     setTimeout(updateInformationBars, 1500);
 }
 
+export function updateMoodBarLastTime() {
+    moodbarLastTime = Date.now()
+    saveMoodBarLastTime(moodbarLastTime)
+}
 
 function adjustMoodBarOnTime() {
     var deltaTime = Date.now() - moodbarLastTime
-    // console.log("Deltatime: "+deltaTime)
+    console.log("Deltatime: "+deltaTime)
     if (deltaTime > 1000*60*60*2) {
         setMoodBar(0)
         return
     }
     var change = Math.floor(deltaTime / (1000*5))
     addToMoodbar(-change)
-    // console.log("Change: "+(-change))
+    console.log("Change: "+(-change))
     if (change !== 0) {
         moodbarLastTime = Date.now()
         saveMoodBarLastTime(moodbarLastTime)
