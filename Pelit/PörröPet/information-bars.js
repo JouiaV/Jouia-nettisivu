@@ -1,15 +1,22 @@
 
-import { getMoodBar, getMoodBarLastTime, saveMoodBar, saveMoodBarLastTime } from "./PörröPet_local_storage.js"
+import { getMoodBar, getMoodBarLastTime, saveMoodBar, saveMoodBarLastTime, saveFoodbar, getFoodbar, getFoodbarLastTime, saveFoodbarLastTime } from "./PörröPet_local_storage.js"
 import { getCustomProperty, incrementCustomProperty, setCustomProperty } from "./updateCustomProperty.js"
 
-const foodBarElem = document.querySelector("[data-foodbar]")
-const healthBarElem = document.querySelector("[data-healthbar]")
+const foodbarElem = document.querySelector("[data-foodbar]")
+const healthbarElem = document.querySelector("[data-healthbar]")
 const moodbarBarElem = document.querySelector("[data-moodbar]")
 
 var moodbarLastTime = getMoodBarLastTime()
 
 updateInformationBars()
 
+
+function updateInformationBars() {
+    adjustMoodBarOnTime(moodbarLastTime)
+    setTimeout(updateInformationBars, 1500);
+}
+
+// MOODBAR ================================================================================================
 
 export function addToMoodbar(amount) {
     var bar_prosent = getMoodBar() + amount
@@ -38,13 +45,6 @@ export function updateMoodbarAmount() {
     setCustomProperty(moodbarBarElem, "--bar-prosent", getMoodBar())
 }
 
-
-
-export function updateInformationBars() {
-    adjustMoodBarOnTime(moodbarLastTime)
-    setTimeout(updateInformationBars, 1500);
-}
-
 export function updateMoodBarLastTime() {
     moodbarLastTime = Date.now()
     saveMoodBarLastTime(moodbarLastTime)
@@ -64,6 +64,31 @@ function adjustMoodBarOnTime() {
         moodbarLastTime = Date.now()
         saveMoodBarLastTime(moodbarLastTime)
     }
+}
+
+
+// FOODBAR ================================================================================================
+
+export function addToFoodbar(amount) {
+    var bar_prosent = getFoodbar() + amount
+    if (0 < bar_prosent < 100) {
+        setCustomProperty(foodbarElem, "--bar-prosent", bar_prosent)
+    } else {
+        setCustomProperty(foodbarElem, "--bar-prosent", -bar_prosent)
+    }
+    if (bar_prosent > 100) {
+        setCustomProperty(foodbarElem, "--bar-prosent", 100)
+    }
+    else if (bar_prosent < 0) {
+        setCustomProperty(foodbarElem, "--bar-prosent", 0)
+    }
+    saveFoodbar(getCustomProperty(foodbarElem, "--bar-prosent"))
+}
+
+
+export function setFoodbar(amount) {
+    setCustomProperty(foodbarElem, "--bar-prosent", amount)
+    saveFoodbar(amount)
 }
 
 

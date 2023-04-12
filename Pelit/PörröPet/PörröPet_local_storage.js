@@ -25,9 +25,9 @@ export function decreaseTurricoins(amount) {
 
 
 // MOODBAR AMOUNT -- - - - - -- - - - -- - - -- - -  - 
-var moodbar
+
 export function getMoodBar() {
-    moodbar = localStorage.getItem("moodbar")
+    var moodbar = localStorage.getItem("moodbar")
     if (moodbar === null || isNaN(moodbar) || moodbar === NaN) {
         moodbar = 0
     }
@@ -52,6 +52,43 @@ export function getMoodBarLastTime() {
 export function saveMoodBarLastTime(amount) {
     localStorage.setItem("moodbarlasttime", amount.toString())
 }
+
+
+
+// FOODBAR AMOUNT -- - - - - -- - - - -- - - -- - -  - 
+
+export function getFoodbar() {
+    var foodbar = localStorage.getItem("foodbar")
+    if (foodbar === null || isNaN(foodbar) || foodbar === NaN) {
+        foodbar = 0
+    }
+    return parseInt(foodbar)
+}
+
+export function saveFoodbar(amount) {
+    localStorage.setItem("foodbar", amount.toString())
+}
+
+// FOODBAR LAST TIME TRIGGERED - - - - - - - - - - - - - - - - --  - - - - -- - - -
+
+export function getFoodbarLastTime() {
+    var foodbarlasttime = localStorage.getItem("foodbarlasttime")
+    if (foodbarlasttime === null) {
+        foodbarlasttime = 0
+    }
+    return foodbarlasttime
+}
+
+export function saveFoodbarLastTime(amount) {
+    localStorage.setItem("foodbarlasttime", amount.toString())
+}
+
+
+// HEALTHBAR AMOUNT -- - - - - -- - - - -- - - -- - -  - 
+
+
+
+// HEALTHBAR LAST TIME TRIGGERED - - - - - - - - - - - - - - - - --  - - - - -- - - -
 
 
 
