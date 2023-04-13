@@ -1,6 +1,8 @@
 
 // MAINOS --------------------------------------------------------------------
-
+if (sessionStorage.getItem("mainos_naytetty") === "true") {
+    close_mainos()
+}
 sessionStorage.setItem("mainos_naytetty", "true")
 
 function close_mainos() {
