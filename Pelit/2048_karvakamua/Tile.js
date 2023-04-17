@@ -21,15 +21,15 @@ export default class Tile {
       const power = Math.log2(v)
       const backgroundLightness = 100 - power * 9
       // 2^11 = 2048
+      if (v === 2048) {
+          alert("Ihanaa, oletpa taitava")
+      } 
+
       if (v === 4) {
             this.#tileElement.style.setProperty(
-                "--background-lightness",
-                `0%`
+            "--text-lightness",
+            `${backgroundLightness <= 50 ? 90 : 10}%`
             )
-            this.#tileElement.style.setProperty(
-                "--text-lightness",
-                `100%`
-                )
             return
       }
       this.#tileElement.style.setProperty(
