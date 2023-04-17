@@ -20,27 +20,42 @@ export default class Tile {
       this.#tileElement.textContent = v
       const power = Math.log2(v)
       const backgroundLightness = 100 - power * 9
-      // 2^11 = 2048
+      
       if (v === 2048) {
           alert("Ihanaa, oletpa taitava")
       } 
 
       if (v === 4) {
             this.#tileElement.style.setProperty(
-            "--text-lightness",
-            `${backgroundLightness <= 50 ? 90 : 10}%`
+            "--bg-src",
+            "url(images/kaisa_3.png)"
             )
-            return
       }
-      this.#tileElement.style.setProperty(
-        "--background-lightness",
-        `${backgroundLightness}%`
-      )
-      this.#tileElement.style.setProperty(
-        "--text-lightness",
-        `${backgroundLightness <= 50 ? 90 : 10}%`
-      )
-    }
+      else if (v === 8) {
+            this.#tileElement.style.setProperty(
+            "--bg-src",
+            "url(./images/olde_kuv_2048.jpg)" 
+            )
+      }
+      else if (v === 16) {
+        this.#tileElement.style.setProperty(
+        "--bg-src",
+        "url(./images/jousia_1.jpg)" 
+        )
+      }
+      else if (v === 32) {
+        this.#tileElement.style.setProperty(
+        "--bg-src",
+        "url(./images/fanni_1.jpg)" 
+        )
+      }
+      else if (v === 64) {
+        this.#tileElement.style.setProperty(
+        "--bg-src",
+        "url(./images/yhteiskuva_1.jpg)" 
+        )
+      }
+  }
   
     set x(value) {
       this.#x = value
