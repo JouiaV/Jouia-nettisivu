@@ -70,10 +70,10 @@
     background-image: var(--bg-src);
     background-size: var(--cell-size);
     font-weight: 100;
-    /* color: rgba(255, 255, 255, 0.5);
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); */
-    color: var(--text-color);
-    text-shadow: 0 0 5px var(--text-color);
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    /* color: var(--text-color);
+    text-shadow: 0 0 5px var(--text-color); */
   }
   
   @keyframes show {
