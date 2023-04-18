@@ -65,12 +65,14 @@
     border-radius: 1vmin;
     top: calc(var(--y) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
     left: calc(var(--x) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
-    font-weight: 100;
-    color: var(--text-color);
     animation: show 200ms ease-in-out;
     transition: 100ms ease-in-out;  
     background-image: var(--bg-src);
     background-size: var(--cell-size);
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    /* color: var(--text-color); */
   }
   
   @keyframes show {
