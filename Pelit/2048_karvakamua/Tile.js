@@ -61,7 +61,7 @@ export default class Tile {
         "url(./images/pösse_1.png)" 
         )
       }
-      else if (v === 246) {
+      else if (v === 256) {
         this.#tileElement.style.setProperty(
         "--bg-src",
         "url(./images/valdo_1.png)" 
