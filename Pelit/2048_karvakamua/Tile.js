@@ -55,6 +55,18 @@ export default class Tile {
         "url(./images/yhteiskuva_1.jpg)" 
         )
       }
+      else if (v === 128) {
+        this.#tileElement.style.setProperty(
+        "--bg-src",
+        "url(./images/pösse_1.png)" 
+        )
+      }
+      else if (v === 246) {
+        this.#tileElement.style.setProperty(
+        "--bg-src",
+        "url(./images/valdo_1.png)" 
+        )
+      }
   }
   
     set x(value) {

@@ -5,8 +5,8 @@ const gameBoard = document.getElementById("game-board")
 
 const grid = new Grid(gameBoard)
 grid.randomEmptyCell().tile = new Tile(gameBoard)
-grid.randomEmptyCell().tile = new Tile(gameBoard)
 setupInput()
+
 
 function setupInput() {
   window.addEventListener("keydown", handleInput, { once: true })
@@ -54,7 +54,7 @@ async function handleInput(e) {
 
   if (!canMoveUp() && !canMoveDown() && !canMoveLeft() && !canMoveRight()) {
     newTile.waitForTransition(true).then(() => {
-      alert("You lose")
+      alert("oot paska pelaa")
     })
     return
   }
