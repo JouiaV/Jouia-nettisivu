@@ -28,7 +28,7 @@ export default class Tile {
       if (v === 4) {
             this.#tileElement.style.setProperty(
             "--bg-src",
-            "url(images/kaisa_3.png)"
+            "url(images/jousia_2.jpg)"
             )
       }
       else if (v === 8) {
@@ -65,6 +65,19 @@ export default class Tile {
         this.#tileElement.style.setProperty(
         "--bg-src",
         "url(./images/valdo_1.png)" 
+        )
+      }
+      else if (v === 512) {
+        this.#tileElement.style.setProperty(
+        "--bg-src",
+        "url(./images/olde_2.jpg)" 
+        )
+      }
+
+      else if (v === 2048) {
+        this.#tileElement.style.setProperty(
+        "--bg-src",
+        "url(./images/JO_1.jpg)" 
         )
       }
   }

@@ -54,7 +54,7 @@ async function handleInput(e) {
 
   if (!canMoveUp() && !canMoveDown() && !canMoveLeft() && !canMoveRight()) {
     newTile.waitForTransition(true).then(() => {
-      alert("oot paska pelaa")
+      alert("Lättyskii")
     })
     return
   }
