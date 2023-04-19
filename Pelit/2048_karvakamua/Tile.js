@@ -28,7 +28,7 @@ export default class Tile {
       if (v === 4) {
             this.#tileElement.style.setProperty(
             "--bg-src",
-            "url(images/jousia_2.jpg)"
+            "url(images/jousia_1.jpg)"
             )
       }
       else if (v === 8) {
