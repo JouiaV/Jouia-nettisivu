@@ -20,7 +20,7 @@ export default class Tile {
       this.#tileElement.textContent = v
       const power = Math.log2(v)
       const backgroundLightness = 100 - power * 9
-      
+    
       if (v === 2048) {
           alert("Ihanaa, oletpa taitava")
       } 
@@ -71,6 +71,13 @@ export default class Tile {
         this.#tileElement.style.setProperty(
         "--bg-src",
         "url(./images/olde_2.jpg)" 
+        )
+      }
+
+      else if (v === 1024) {
+        this.#tileElement.style.setProperty(
+        "--bg-src",
+        "url(./images/lissa_1.png)" 
         )
       }
 
