@@ -65,6 +65,6 @@ window.onscroll = function() {
 
 // MAINOS
 if (sessionStorage.getItem("mainos_naytetty") === null) {
-    window.open("vaipo_mainos.html","_self")
+    // window.open("vaipo_mainos.html","_self")
 }
 
