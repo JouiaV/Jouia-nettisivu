@@ -24,8 +24,11 @@ h1 {
 
 .loma-laskin {
     background-color: aqua;
+    background-image: url("/images/kesäloma_kuva.png");
+    background-size: cover;
+    background-position: center;
     margin: 0 10em;
-    padding: 5em 0;
+    padding: 9em 0;
     border-radius: 2em;
     box-shadow: 0 0 20px 0 rgb(223, 223, 223);
 }
