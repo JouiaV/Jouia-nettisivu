@@ -13,7 +13,7 @@ function unfadeContent() {
         content.style.filter = 'alpha(opacity=' + op * 100 + ")";
         op += op * 0.1; 
     }, 10);
-}
+}  
 
 
 // Cool hover effect
